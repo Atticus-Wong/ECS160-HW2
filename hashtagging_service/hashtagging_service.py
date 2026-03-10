@@ -16,7 +16,7 @@ def generate_hashtag(post_content):
 
         PROMPT = f'''You will be given some content of a social media post, and you must generate some hashtags for that post based on the given data. you must only output the hashtags as a string {post_content} '''
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             contents=PROMPT,
         )
         if response.text is None:
